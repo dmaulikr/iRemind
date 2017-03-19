@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class TENGNotificationModel;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NSDictionary *notificationDic;
+@property (strong, nonatomic) TENGNotificationModel *notiModel;
 
 @end
 

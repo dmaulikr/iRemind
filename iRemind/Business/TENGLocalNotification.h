@@ -11,10 +11,12 @@
 @class TENGNotificationModel;
 @interface TENGLocalNotification : NSObject
 
-+ (void)addLocalNotification:(NSDictionary *)notInfo;
++ (void)addLocalNotification:(TENGNotificationModel *)notifiModel;
 
-+ (void)removeLocalNotification:(TENGNotificationModel *)notiModel;
++ (void)removeLocalNotification:(NSString *)notificationId;
 
 + (void)showLocalNotification:(UILocalNotification *)notification;
+
++ (void)changeLocalNotification:(NSString *)notificationId;
 
 @end

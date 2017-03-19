@@ -39,7 +39,7 @@
 
 -(void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
     if (notificationSettings.types!=UIUserNotificationTypeNone) {
-        [TENGLocalNotification addLocalNotification:self.notificationDic];
+        [TENGLocalNotification addLocalNotification:self.notiModel];
     }
 }
 

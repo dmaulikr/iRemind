@@ -15,42 +15,80 @@ NSString const *NOTIFICATION_ID = @"notification_id";
 
 @implementation TENGLocalNotification
 
-+ (void)addLocalNotification:(NSDictionary *)notInfo{
-    if (!notInfo) {
++ (void)addLocalNotification:(TENGNotificationModel *)notifiModel{
+    if (!notifiModel) {
         return;
     }
     
+    
     if ([[UIApplication sharedApplication] currentUserNotificationSettings].types!=UIUserNotificationTypeNone) {
-        TENGNotificationModel *model = [[TENGNotificationModel alloc] initValueWithDic:notInfo];
         
-        UILocalNotification *notification = [UILocalNotification new];
-        notification.alertBody = model.alertBody;
-        notification.alertTitle = model.alertTitle;
-        notification.soundName = model.soundName;
-        notification.fireDate = model.fireDate;
-        notification.userInfo = @{NOTIFICATION_ID:model.notificationId};
-        
-        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+        NSCalendar *calendar=[[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        NSDateComponents *comps = [[NSDateComponents alloc] init];
+        NSInteger unitFlags = NSCalendarUnitEra |
+        NSCalendarUnitYear |
+        NSCalendarUnitMonth |
+        NSCalendarUnitDay |
+        NSCalendarUnitHour |
+        NSCalendarUnitMinute |
+        NSCalendarUnitSecond |
+        NSCalendarUnitWeekOfYear |
+        NSCalendarUnitWeekday |
+        NSCalendarUnitWeekdayOrdinal |
+        NSCalendarUnitQuarter;
+        comps = [calendar components:unitFlags fromDate:[NSDate date]];
+        for (int i = 0; i <100; i++) {
+            NSDate *newFireDate = [[calendar dateFromComponents:comps] dateByAddingTimeInterval:1*i];
+            UILocalNotification *notification = [[UILocalNotification alloc] init];
+            if (notification) {
+                notification.fireDate = newFireDate;
+                notification.alertBody = notifiModel.alertBody;
+                notification.alertTitle = notifiModel.alertTitle;
+                notification.soundName = notifiModel.soundName;
+                notification.timeZone = [NSTimeZone defaultTimeZone];
+                notification.userInfo = @{NOTIFICATION_ID:notifiModel.notificationId};
+                
+                [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+            }
+        }
+
     }else{
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound  categories:nil]];
-        [(AppDelegate *)[UIApplication sharedApplication].delegate setNotificationDic:notInfo];
+        [(AppDelegate *)[UIApplication sharedApplication].delegate setNotiModel:notifiModel];
     }
     
 }
-+ (void)removeLocalNotification:(TENGNotificationModel *)notiModel{
++ (void)removeLocalNotification:(NSString *)notificationId{
     
-    if (!notiModel.notificationId) {
+    if (!notificationId) {
         return;
     }
     
     for (UILocalNotification *noti in  [UIApplication sharedApplication].scheduledLocalNotifications) {
         NSString *notifiId = noti.userInfo[NOTIFICATION_ID];
-        if ([notifiId isEqualToString:notiModel.notificationId]) {
+        if ([notifiId isEqualToString:notificationId]) {
             [[UIApplication sharedApplication] cancelLocalNotification:noti];
             break;
         }
     }
 
+}
++ (void)changeLocalNotification:(NSString *)notificationId{
+    
+    if (!notificationId) {
+        return;
+    }
+    
+    for (UILocalNotification *noti in  [UIApplication sharedApplication].scheduledLocalNotifications) {
+        NSString *notifiId = noti.userInfo[NOTIFICATION_ID];
+        if ([notifiId isEqualToString:notificationId]) {
+            noti.fireDate = [noti.fireDate dateByAddingTimeInterval:10];
+            [[UIApplication sharedApplication] scheduleLocalNotification:noti];
+
+            break;
+        }
+    }
+    
 }
 + (void)showLocalNotification:(UILocalNotification *)notification{
     
@@ -66,13 +104,22 @@ NSString const *NOTIFICATION_ID = @"notification_id";
     //弹出alert提示框、或者自定义提示框
     //当应用在后台，用户没有点击通知栏时,提醒事件应当根据提醒事件，提醒状态改变背景颜色，提醒用户有事件提醒
     
+    NSString *nId = notification.userInfo[NOTIFICATION_ID];
+
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:notification.alertTitle message:notification.alertBody preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"确认提醒" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [TENGLocalNotification removeLocalNotification:nId];
         
     }]];
     
-    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"待会再说" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [TENGLocalNotification changeLocalNotification:nId];
+//        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     }]];
     APP_PRESENT(alert);
+}
+
++ (void)addLocalNoti{
+    
 }
 @end

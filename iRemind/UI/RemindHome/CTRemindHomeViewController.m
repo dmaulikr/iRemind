@@ -12,6 +12,8 @@
 #import "CTRootViewController.h"
 #import <MJRefresh/MJRefresh.h>
 #import "CTTool.h"
+#import "TENGNotificationModel.h"
+#import "TENGLocalNotification.h"
 
 @interface CTRemindHomeViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -127,6 +129,15 @@
 
 }
 - (void)goSearch{
+    
+    TENGNotificationModel *test = [TENGNotificationModel new];
+    test.alertBody  = @"testBody";
+    test.alertTitle = @"testTitle";
+    test.fireDate = [[NSDate new] dateByAddingTimeInterval:10];
+    test.soundName = UILocalNotificationDefaultSoundName;
+    test.repeatInterval = NSCalendarUnitSecond;
+    test.notificationId = @"test1";
+    [TENGLocalNotification addLocalNotification:test];
     debugLog(@"search");
 }
 - (void)deleteCellAction:(UIButton *)sender{

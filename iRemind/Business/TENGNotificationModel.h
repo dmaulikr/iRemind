@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSDate *fireDate;
 @property (strong, nonatomic) NSString *soundName;
 @property (strong, nonatomic) NSString *notificationId;
+@property (assign, nonatomic) NSCalendarUnit repeatInterval;
 
 - (instancetype)initValueWithDic:(NSDictionary *)dic;
 @end
