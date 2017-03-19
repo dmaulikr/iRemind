@@ -1,0 +1,58 @@
+PODS:
+  - AVOSCloud (4.2.0)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - MJRefresh (3.1.12)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SVProgressHUD (2.1.2)
+  - TYKYLibrary (1.0.7):
+    - TYKYLibrary/AutoLocation (= 1.0.7)
+    - TYKYLibrary/AutoLoop (= 1.0.7)
+    - TYKYLibrary/CustomAlbum (= 1.0.7)
+    - TYKYLibrary/CustomCamera (= 1.0.7)
+    - TYKYLibrary/DownloadAndUpload (= 1.0.7)
+    - TYKYLibrary/LeftMenu (= 1.0.7)
+    - TYKYLibrary/ONEPhoto (= 1.0.7)
+    - TYKYLibrary/PageViewController (= 1.0.7)
+    - TYKYLibrary/Request (= 1.0.7)
+    - TYKYLibrary/ShowPictures (= 1.0.7)
+    - TYKYLibrary/TableViewDelegate (= 1.0.7)
+    - TYKYLibrary/TouchIDAuthorize (= 1.0.7)
+  - TYKYLibrary/AutoLocation (1.0.7)
+  - TYKYLibrary/AutoLoop (1.0.7)
+  - TYKYLibrary/CustomAlbum (1.0.7)
+  - TYKYLibrary/CustomCamera (1.0.7):
+    - TYKYLibrary/CustomAlbum
+  - TYKYLibrary/DownloadAndUpload (1.0.7)
+  - TYKYLibrary/LeftMenu (1.0.7)
+  - TYKYLibrary/ONEPhoto (1.0.7):
+    - TYKYLibrary/CustomAlbum
+  - TYKYLibrary/PageViewController (1.0.7)
+  - TYKYLibrary/Request (1.0.7)
+  - TYKYLibrary/ShowPictures (1.0.7):
+    - TYKYLibrary/DownloadAndUpload
+  - TYKYLibrary/TableViewDelegate (1.0.7)
+  - TYKYLibrary/TouchIDAuthorize (1.0.7)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - FMDB
+  - MJRefresh
+  - SDWebImage
+  - SVProgressHUD (~> 2.1.2)
+  - TYKYLibrary (~> 1.0.7)
+
+SPEC CHECKSUMS:
+  AVOSCloud: 5446ad0320f4942cce1a036d131992cd1115db99
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TYKYLibrary: 6077014b26882266011d58cb3a117fbfad7033e2
+
+PODFILE CHECKSUM: 1a843eedfb15fccfa15d9078fd2835b54c0ca0a2
+
+COCOAPODS: 1.2.0

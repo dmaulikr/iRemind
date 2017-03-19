@@ -1,0 +1,56 @@
+//
+//  iRemind-Prefix.pch
+//  iRemind
+//
+//  Created by 腾 on 2017/2/25.
+//  Copyright © 2017年 腾. All rights reserved.
+//
+
+#ifndef iRemind_pch
+#define iRemind_pch
+
+#import <AVOSCloud/AVOSCloud.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+
+#import "CTBaseViewController.h"
+#import "CTTool.h"
+
+#endif /* iRemind_pch */
+
+#define EVENT_CLASS     @"UserEvents"
+
+#define USER_ID         @"userId"
+#define REMIND_TYPE     @"remindType"
+#define REMIND_TIME     @"remindTime"
+#define EVENT_CONTENT   @"eventContent"
+#define EVENT_TITLE     @"eventTitle"
+
+#define dHeight   [[UIScreen mainScreen] bounds].size.height
+#define dWidth    [[UIScreen mainScreen] bounds].size.width
+
+#ifdef DEBUG
+
+#define debugLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#define bPushMode    BPushModeDevelopment
+
+#else
+
+#define debugLog(...)
+#define debugMethod()
+#define bPushMode   BPushModeProduction
+
+#endif
+
+#define LOADIMAGE(name) [UIImage imageNamed:name]
+#define LOADFILEIMAGE(name,type)  [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:name ofType:type]
+
+#define LABEL_FRAME(frame)      [[UILabel alloc] initWithFrame:frame]
+#define BUTTON_FRAME(frame)     [[UIButton alloc] initWithFrame:frame]
+#define BUTTON_ACTION(btn,target,bselector) [btn addTarget:target action:bselector forControlEvents:UIControlEventTouchUpInside];
+
+#define APP_PRESENT(VC)     [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:VC animated:YES completion:nil]
+#define APP_PUSH(VC)        [self.navigationController pushViewController:VC animated:YES]
+#define POPVC               [self.navigationController popViewControllerAnimated:YES]
