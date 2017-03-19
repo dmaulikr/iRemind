@@ -118,7 +118,7 @@
 }
 
 - (void)initNavitationBarItems{
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"me"] style:UIBarButtonItemStylePlain target:self action:@selector(showUserCenter)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"user"] style:UIBarButtonItemStylePlain target:self action:@selector(showUserCenter)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(goSearch)];
     self.navigationItem.leftBarButtonItem.imageInsets = UIEdgeInsetsMake(5, 5, 5, 5);
     self.navigationItem.rightBarButtonItem.imageInsets = UIEdgeInsetsMake(6, 6, 6, 6);

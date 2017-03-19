@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B774CEC1E7E5F6000B3C89C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B774CEB1E7E5F6000B3C89C /* main.m */; };
 		0B774CEF1E7E5F6000B3C89C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B774CEE1E7E5F6000B3C89C /* AppDelegate.m */; };
-		0B774CF21E7E5F6000B3C89C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B774CF11E7E5F6000B3C89C /* ViewController.m */; };
 		0B774CF51E7E5F6000B3C89C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B774CF31E7E5F6000B3C89C /* Main.storyboard */; };
 		0B774CF71E7E5F6000B3C89C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B774CF61E7E5F6000B3C89C /* Assets.xcassets */; };
 		0B774CFA1E7E5F6000B3C89C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B774CF81E7E5F6000B3C89C /* LaunchScreen.storyboard */; };
@@ -51,8 +50,6 @@
 		0B774CEB1E7E5F6000B3C89C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B774CED1E7E5F6000B3C89C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B774CEE1E7E5F6000B3C89C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B774CF01E7E5F6000B3C89C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0B774CF11E7E5F6000B3C89C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0B774CF41E7E5F6000B3C89C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B774CF61E7E5F6000B3C89C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B774CF91E7E5F6000B3C89C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,8 +143,6 @@
 				0B774D211E7E61BE00B3C89C /* UI */,
 				0B774CED1E7E5F6000B3C89C /* AppDelegate.h */,
 				0B774CEE1E7E5F6000B3C89C /* AppDelegate.m */,
-				0B774CF01E7E5F6000B3C89C /* ViewController.h */,
-				0B774CF11E7E5F6000B3C89C /* ViewController.m */,
 				0B774CF31E7E5F6000B3C89C /* Main.storyboard */,
 				0B774CF61E7E5F6000B3C89C /* Assets.xcassets */,
 				0B774CF81E7E5F6000B3C89C /* LaunchScreen.storyboard */,
@@ -446,7 +441,6 @@
 				0B774D441E7E61BE00B3C89C /* CTRootViewController.m in Sources */,
 				0B774D491E7E61BE00B3C89C /* CTUserCentreViewController.m in Sources */,
 				0B774D451E7E61BE00B3C89C /* RemindTableViewCell.m in Sources */,
-				0B774CF21E7E5F6000B3C89C /* ViewController.m in Sources */,
 				0B774D3E1E7E61BE00B3C89C /* TENGLocalNotification.m in Sources */,
 				0B774CEF1E7E5F6000B3C89C /* AppDelegate.m in Sources */,
 				0B774D3C1E7E61BE00B3C89C /* UIView+SDXIBExtension.m in Sources */,
