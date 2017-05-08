@@ -36,14 +36,22 @@ PODS:
     - TYKYLibrary/DownloadAndUpload
   - TYKYLibrary/TableViewDelegate (1.0.7)
   - TYKYLibrary/TouchIDAuthorize (1.0.7)
+  - UMengAnalytics-NO-IDFA (4.2.5)
+  - UMengUShare/Core (6.4.3):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.3)
+  - UMengUShare/Social/ReducedWeChat (6.4.3):
+    - UMengUShare/Core
 
 DEPENDENCIES:
   - AVOSCloud
   - FMDB
   - MJRefresh
   - SDWebImage
-  - SVProgressHUD (~> 2.1.2)
-  - TYKYLibrary (~> 1.0.7)
+  - SVProgressHUD
+  - TYKYLibrary
+  - UMengAnalytics-NO-IDFA
+  - UMengUShare/Social/ReducedWeChat
 
 SPEC CHECKSUMS:
   AVOSCloud: 5446ad0320f4942cce1a036d131992cd1115db99
@@ -52,7 +60,9 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   TYKYLibrary: 6077014b26882266011d58cb3a117fbfad7033e2
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
+  UMengUShare: d39cb682598df87ebdd3c055d03d00eb0102d42c
 
-PODFILE CHECKSUM: 1a843eedfb15fccfa15d9078fd2835b54c0ca0a2
+PODFILE CHECKSUM: 2908db420cb156b1258a3f66c5cda30b016ab2f6
 
 COCOAPODS: 1.2.0

@@ -90,6 +90,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "TYKYLibrary/TYKYLibrary/CustomAlbum/max_warinig.png"
   install_resource "TYKYLibrary/TYKYLibrary/CustomAlbum/selected_album@2x.png"
   install_resource "TYKYLibrary/TYKYLibrary/CustomAlbum/unselected_album@2x.png"
+  install_resource "UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc"
@@ -105,6 +106,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "TYKYLibrary/TYKYLibrary/CustomAlbum/max_warinig.png"
   install_resource "TYKYLibrary/TYKYLibrary/CustomAlbum/selected_album@2x.png"
   install_resource "TYKYLibrary/TYKYLibrary/CustomAlbum/unselected_album@2x.png"
+  install_resource "UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

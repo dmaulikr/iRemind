@@ -327,6 +327,7 @@
 				TargetAttributes = {
 					0B774CE61E7E5F6000B3C89C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2NZ83N8RQJ;
 						ProvisioningStyle = Automatic;
 					};
 					0B774CFF1E7E5F6100B3C89C = {
@@ -583,6 +584,7 @@
 			baseConfigurationReference = E63F6AD3FFB32D533719EAB0 /* Pods-iRemind.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2NZ83N8RQJ;
 				GCC_PREFIX_HEADER = iRemind/iRemind.pch;
 				INFOPLIST_FILE = iRemind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -596,6 +598,7 @@
 			baseConfigurationReference = BDC03E79E2A8E81DB507DE47 /* Pods-iRemind.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2NZ83N8RQJ;
 				GCC_PREFIX_HEADER = iRemind/iRemind.pch;
 				INFOPLIST_FILE = iRemind/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
